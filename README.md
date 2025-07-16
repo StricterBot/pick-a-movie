@@ -2,15 +2,15 @@
 
 ![Badge de Status](https://img.shields.io/static/v1?label=type&message=personal%20project&color=blue&style=for-the-badge)
 
-Este projeto surgiu da necessidade de apoio a uma tomada de decisão simples: Escolher um filme para assistir.
-Com tantos serviços de streaming e tantos filmes sendo lançados, fica difícil saber o que assistir? Este projeto te ajuda! 
+Este projeto surgiu da necessidade de apoio a uma tomada de decisão simples: Escolher um filme para assistir.<p>
+Com tantos serviços de streaming e tantos filmes sendo lançados, ta ficando difícil saber o que assistir em seguida? Este projeto te ajuda! 
 
 O "Fala um Filme Ai" é uma aplicação full-stack que sugere um filme aleatório para você, com a possibilidade de aplicar filtros para encontrar a sugestão perfeita.
 
-<img width="600px" src="https://drive.google.com/uc?export=view&id=1MQOKS_9gNIuvypmySdoke-DkjTvkfk99">
+<img width="800px" src="https://drive.google.com/uc?export=view&id=1MQOKS_9gNIuvypmySdoke-DkjTvkfk99">
 
 
-## Funcionalidades
+## Resumo
 
 *   **Sugestão Aleatória:** Obtenha uma sugestão de filme com um único clique.
 *   **Opções de Filtro:** Filtre por gênero, classificação indicativa, ano de lançamento, etc.
@@ -19,32 +19,23 @@ O "Fala um Filme Ai" é uma aplicação full-stack que sugere um filme aleatóri
 
 ## Funcionalidades
 
-A aplicação é dividida em duas partes principais: o **Frontend (Client)**, que é a interface com o usuário, e o **Backend (Server)**, que centraliza a lógica de negócio e a comunicação com serviços externos.
+A aplicação é dividida em duas partes principais: o **Frontend (Client)**, que é a interface com o usuário, e o **Backend (Server)**, que centraliza a lógica de negócio e a comunicação com uma API externa.
 
 ### Frontend (Client)
 
-O frontend foi construído com uma stack moderna, focada em performance e experiência de desenvolvimento:
+O frontend foi construído com React(JS) e TailwindCSS, focada em performance e experiência de desenvolvimento:
 
 *   **React:** Para a construção da interface de usuário de forma declarativa e componentizada.
 *   **Vite:** Como ferramenta de build, oferecendo um desenvolvimento local extremamente rápido com Hot Module Replacement (HMR).
 *   **Tailwind CSS:** Para uma estilização ágil e customizável através de classes utilitárias.
 *   **Axios:** Para realizar as chamadas HTTP para o nosso backend de forma simples e robusta.
 
-O fluxo é simples: quando o usuário interage com a interface (ex: clica no botão "Recomende"), o React dispara uma requisição para o nosso backend.
-
 ### Backend (Server)
 
-O backend foi desenhado seguindo o padrão **BFF (Backend for Frontend)**. Ele atua como uma camada intermediária inteligente entre o cliente e a API externa de filmes (como a do [The Movie Database - TMDB](https://www.themoviedb.org/)), trazendo mais segurança e eficiência.
-
-#### Possiveis Futuras Implelementações
-
--  Classificação Indicativa por nota
--  Adicionar uma nova sub-categoria
--  Campo de texto para pesquisar titulos semelhantes ao informado
--  Preparar recomendações de onde assistir ao interagir com o card do filme
+O backend foi desenhado seguindo o padrão **BFF (Backend for Frontend)**. Ele atua como uma camada intermediária inteligente entre o cliente e a API externa de filmes, trazendo mais segurança e eficiência.
 
 #### Como Funciona
-**Processamento e Lógica:** O TMDB retorna uma lista, muitas vezes com dezenas de filmes e uma grande quantidade de dados para cada um. O backend então aplica a lógica principal:
+**Processamento e Lógica:** O TMDB (API de Filmes) retorna uma lista, muitas vezes com dezenas de filmes e uma grande quantidade de dados para cada um. O backend então aplica a lógica principal:
     *   Seleciona **um filme aleatório** da lista recebida (Atualmente limitado a quatro páginas por recomendações).
 
 **Formatação da Resposta:** Em vez de retornar todos os dados do filme escolhido, o backend filtra e formata um objeto de resposta simples, contendo apenas as informações que o frontend realmente precisa (ex: `title`, `overview`, `poster_path`, `vote_average`).
@@ -53,6 +44,14 @@ O backend foi desenhado seguindo o padrão **BFF (Backend for Frontend)**. Ele a
 
 Essa arquitetura desacoplada garante que a lógica de negócio e as chaves de API estejam seguras, além de otimizar o tráfego de dados para o cliente.
 
+#### Possiveis Futuras Implelementações
+
+-  Classificação Indicativa por nota
+-  Adicionar uma nova sub-categoria
+-  Campo de texto para pesquisar titulos semelhantes ao informado
+-  Preparar recomendações de onde assistir ao interagir com o card do filme
+
+---
 ## Tecnologias Utilizadas
 
 [![JavaScript](https://custom-icon-badges.demolab.com/badge/-JavaScript-F7DF1E?logo=javascript&logoColor=black&style=flat-square)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
@@ -66,7 +65,7 @@ Essa arquitetura desacoplada garante que a lógica de negócio e as chaves de AP
 
 ## Contribuindo
 
- Este projeto é pessoal e não tem fins lucrativos. Toda ajuda é bem-vinda.
+ Este projeto é pessoal e não tem fins lucrativos. Toda ajuda é bem-vinda.<p>
  Por favor veja [CONTRIBUTING.md](https://github.com/StricterBot/pick-a-movie/blob/main/CONTRIBUTING.md) para detalhes.
 
 ---

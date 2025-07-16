@@ -1,0 +1,26 @@
+{
+  "name": "fala-um-filme-ai-root",
+  "version": "1.0.0",
+  "description": "Root project for Fala um Filme Ai application (frontend and backend)",
+  "main": "index.js",
+  "scripts": {
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "start:dev": "concurrently \"npm run client\" \"npm run server\"",
+    "install:all": "npm install --prefix client && npm install --prefix server"
+  },
+  "keywords": [
+    "react",
+    "nodejs",
+    "express",
+    "tailwind",
+    "vite",
+    "movie-recommendation",
+    "full-stack"
+  ],
+  "author": "StricterBot",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
